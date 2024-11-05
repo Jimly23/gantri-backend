@@ -12,7 +12,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors({origin: "http://localhost:5173", methods: ["GET", "POST", "PUT", "DELETE"]}));
+app.use(cors({origin: "https://gantri-one.vercel.app", methods: ["GET", "POST", "PUT", "DELETE"]}));
 
 app.use('/api', userRouter);
 app.use('/api', queueRouter);
