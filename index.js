@@ -18,7 +18,7 @@ app.use('/api', userRouter);
 app.use('/api', queueRouter);
 
 
-mongoose.connect(process.env.MONGO_URL).then(() =>{ 
+mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true, useUnifiedTopology: true}).then(() =>{ 
   console.log("MongoDB connected");
   // app.listen(process.env.PORT, () => console.log("Server is running"));
 }).catch((err) => console.log(err));
