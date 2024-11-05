@@ -20,5 +20,9 @@ app.use('/api', queueRouter);
 
 mongoose.connect(process.env.MONGO_URL).then(() =>{ 
   console.log("MongoDB connected");
-  app.listen(process.env.PORT, () => console.log("Server is running"));
+  // app.listen(process.env.PORT, () => console.log("Server is running"));
 }).catch((err) => console.log(err));
+
+export default function handler(req, res) {
+  app(req, res);
+}
